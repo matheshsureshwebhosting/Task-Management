@@ -1,0 +1,33 @@
+.taskcard {
+    font-family: sans-serif;
+    margin-top: 1em;
+    border-radius: 10px;
+    background-color: #ffff;
+    padding: 0.8rem;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.taskbody {
+    font-weight: bolder;
+    color: black;
+}
+
+.blogshort {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width:650px) {
+    .card-img-top {
+        display: none;
+    }
+
+    .taskcard {
+        max-height: 150px !important;
+        width: 314px !important;
+    }
+}

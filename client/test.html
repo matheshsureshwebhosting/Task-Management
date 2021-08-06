@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <script>
+        const projects = [
+            {
+                project_title: "aaaa",
+                Company_name: "bbb",
+                Onwer_name: "ooo",
+                Projectid: "27df9a72-a867-430d-a952-430602312945"
+            },
+            {
+                project_title: "aaaa",
+                Company_name: "bbb",
+                Onwer_name: "ooo",
+                Projectid: "27df9a72-a867-430d-a952-430602312945"
+            }
+        ]
+
+        const filteredArr = projects.reduce((acc, current) => {
+            const x = acc.find(item => item.Projectid === current.Projectid);
+            if (!x) {
+                return acc.concat([current]);
+            } else {
+                return acc;
+            }
+        }, []);
+        console.log(filteredArr)
+
+    </script>
+</body>
+
+</html>
